@@ -103,7 +103,7 @@ hipotenusa base altura = sqrt(base^2 + altura^2)
 {- 
 Función: pendiente
 Descripción: Dadas dos tuplas, cada una de dos valores numéricos, correspondientes a dos puntos en el plano cartesiano, 
-devuelve un valor correspondiente a la pendiente de la recta que pasa por los dos puntos.  
+devuelve un valor numérico correspondiente a la pendiente de la recta que pasa por los dos puntos.  
 Uso: 
 pendiente (2, 1) (-2, -1) = 0.5
 -}
@@ -115,8 +115,17 @@ pendiente (x1, y1) (x2, y2) = pen
         p2 = x2 - x1
         pen = p1 / p2
 
-{- distanciaPuntos
-Función:  
-Descripción: 
-Uso:  
+{- 
+Función: distanciaPuntos
+Descripción: Dadas dos tuplas, cada una de dos valores numéricos, correspondientes a dos puntos en el plano cartesiano, 
+devuelve un valor numérico corresponddiente a la distancia entre los puntos. 
+Uso: 
+distanciaPuntos (2, 3) (4, 5) = 2.828427
 -}
+
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos (x1, y1) (x2, y2) = dis
+    where 
+        p1 = x2 - x1 
+        p2 = y2 - y1
+        dis = sqrt((p1)^2 + (p2)^2) 
