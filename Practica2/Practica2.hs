@@ -23,10 +23,35 @@ cashbackMonto :: Float -> Float
 cashbackMonto x = x * 0.10 
 
 {- Función minutosHoras
-Descripción: Calcula el equivalente de una cantidad de minutos en términos de horas, teniendo en cuenta que cada hora tiene 60 minutos. 
-Uso: minutosHoras ? = ?
+Descripción: Calcula el equivalente de una cantidad de minutos en términos de horas. 
+Uso: minutosHoras 135 = 2 horas y 15 minutos
 -}
 
-minutosHoras :: Int -> Int 
-minutosHoras x = x `div` 60 
+minutosHoras :: Int -> String 
+minutosHoras x = show horas ++ " horas y " ++ show minutos ++ " minutos " 
+    where
+        (horas, minutos) = x `divMod` 60 
 
+{- Función: esEstafa 
+Descripción: Dadas cuatro cantidades, el primer billete, el cambio, el segundo billete y el primer billete, evalúa si se ha perdido dinero. 
+Uso: 
+esEstafa 200 100 200 0
+esEstafa True
+-}
+
+esEstafa :: Int -> Int -> Int -> Int -> Bool
+esEstafa x y z w = if (x - y + z - w) <= 0
+then True
+else False
+
+{- Función: esDescendente 
+Descripción: Dados cuatro valores numéricos, evalúa si están en orden descendiente.
+Uso: 
+esDescendente 5 4 3 2
+esDescendente True
+-}
+
+esDescendente :: Int -> Int -> Int -> Int -> Bool
+esDescendente x y z w = if x > y && y > z && z > w
+then True
+else False
