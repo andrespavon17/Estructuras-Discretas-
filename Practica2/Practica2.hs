@@ -21,3 +21,12 @@ Uso: cashbackMonto 59.9 = 5.99
 
 cashbackMonto :: Float -> Float
 cashbackMonto x = x * 0.10 
+
+{- Función minutosHoras
+Descripción: Calcula el equivalente de una cantidad de minutos en términos de horas, teniendo en cuenta que cada hora tiene 60 minutos. 
+Uso: minutosHoras ? = ?
+-}
+
+minutosHoras :: Int -> Int 
+minutosHoras x = x `div` 60 
+
