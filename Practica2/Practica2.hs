@@ -42,17 +42,19 @@ minutosHoras x = show horas ++ " horas y " ++ show minutos ++ " minutos "
 
 {- 
 Función: esEstafa 
-Descripción: Dadas cuatro cantidades, el primer billete, el cambio, el segundo billete y el primer billete, evalúa si se ha perdido dinero. 
+Descripción: Dadas cuatro cantidades, el precio, el primer pago, el cambio, el segundo pago, 
+evalúa si se ha ganado o perdido dinero para decidir si una estafa tuvo lugar. 
 Uso: 
-esEstafa 200 100 200 0
+esEstafa 100 200 100 100
 esEstafa True
 -}
 
 esEstafa :: Int -> Int -> Int -> Int -> Bool
-esEstafa x y z w = if (x - y + z - w) <= 0
+esEstafa precio pago1 cambio pago2 = if cobro < precio
 then True
 else False
-
+    where 
+        cobro = pago1 - cambio + pago2 - pago1
 
 {- 
 Función: esDescendente 
