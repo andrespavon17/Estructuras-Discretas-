@@ -1,4 +1,4 @@
-# # Práctica 2: *Thinking in Haskell* (Introducción)
+# Práctica 2: *Thinking in Haskell* (Introducción)
 
 **Objetivo:**
 
