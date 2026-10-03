@@ -47,18 +47,18 @@ minutosHoras x = show horas ++ " horas y " ++ show minutos ++ " minutos "
 
 {- 
 Función: esEstafa 
-Descripción: Dadas cuatro cantidades, el precio de un producto, el primer pago, el cambio y el segundo pago, 
-evalúa si se ha ganado o perdido dinero para decidir si una estafa tuvo lugar. 
+Descripción: Dadas cuatro cantidades, el precio de un producto, el primer pago, el cambio y la ganancia, 
+evalúa si la ganancia es correcta para decidir si una estafa tuvo lugar. 
 Uso: 
-esEstafa 100 200 100 200 = True
+esEstafa 200 100 100 200 = True
 -}
 
-esEstafa :: Int -> Int -> Int -> Int -> Bool
-esEstafa precio pago1 cambio pago2 = if cobro < precio
+esEstafa :: Float -> Float -> Float -> Float -> Bool
+esEstafa precio pago cambio ganancia = if ganancia < transaccion
 then True
 else False
     where 
-        cobro = pago1 - cambio + pago2 - pago1
+        transaccion = ((precio - pago) + cambio) 
 
 {- 
 Función: esDescendente 
