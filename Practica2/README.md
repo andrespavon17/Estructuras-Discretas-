@@ -15,4 +15,4 @@ Para dar estilo a algunas funciones, las he definido de manera que devuelvan un 
 
 A continuación muestro una fotografía del primer paso de la práctica, que consiste en realizar un prompt y cargar un archivo desde el entorno interactivo GHCi. 
 
-![mi imagen] (Practica2Paso1.png)
+![mi imagen](Practica2Paso1.png)
