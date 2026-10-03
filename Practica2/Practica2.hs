@@ -50,7 +50,7 @@ Función: esEstafa
 Descripción: Dadas cuatro cantidades, el precio de un producto, el primer pago, el cambio y el segundo pago, 
 evalúa si se ha ganado o perdido dinero para decidir si una estafa tuvo lugar. 
 Uso: 
-esEstafa 100 200 100 100 = True
+esEstafa 100 200 100 200 = True
 -}
 
 esEstafa :: Int -> Int -> Int -> Int -> Bool
