@@ -16,9 +16,9 @@ Uso:
 cashback 599 = 59.9
 -}
 
-cashback :: Float -> Float
-cashback x = x * 0.10 
-
+cashback :: Float -> String
+cashback x = "Tienes " ++ show puntos ++ " puntos" 
+    where puntos = x * 0.10
 
 {- 
 Función cashbackMonto
@@ -28,8 +28,9 @@ Uso:
 cashbackMonto 59.9 = 5.99
 -}
 
-cashbackMonto :: Float -> Float
-cashbackMonto x = x * 0.10 
+cashbackMonto :: Float -> String
+cashbackMonto x = "Tus puntos equivalen a " ++ show dinero ++ " pesos"
+    where dinero = x * 0.10 
 
 
 {- 
@@ -97,8 +98,10 @@ Uso:
 hipotenusa 3 4 = 5.0
 -}
 
-hipotenusa :: Float -> Float -> Float
-hipotenusa base altura = sqrt(base^2 + altura^2)
+hipotenusa :: Float -> Float -> String
+hipotenusa base altura = "La hipotenusa es " ++ show hip 
+    where 
+        hip = sqrt(base^2 + altura^2)
 
 {- 
 Función: pendiente
@@ -108,8 +111,8 @@ Uso:
 pendiente (2, 1) (-2, -1) = 0.5
 -}
 
-pendiente :: (Float, Float) -> (Float, Float) -> Float 
-pendiente (x1, y1) (x2, y2) = pen
+pendiente :: (Float, Float) -> (Float, Float) -> String 
+pendiente (x1, y1) (x2, y2) = "La pendiente es " ++ show pen
     where 
         p1 = y2 - y1 
         p2 = x2 - x1
@@ -123,8 +126,8 @@ Uso:
 distanciaPuntos (2, 3) (4, 5) = 2.828427
 -}
 
-distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
-distanciaPuntos (x1, y1) (x2, y2) = dis
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> String
+distanciaPuntos (x1, y1) (x2, y2) = "La distancia entre los puntos es " ++ show dis
     where 
         p1 = x2 - x1 
         p2 = y2 - y1
