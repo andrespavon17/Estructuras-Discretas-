@@ -1,4 +1,4 @@
-import EsParBin
+import ModulosPractica3
 
 {-
 Función: cetes
@@ -65,3 +65,14 @@ soloPares [1, 2, 3, 4, 5, 6]
 
 soloPares :: [Int] -> [Int]
 soloPares xs = [x | x <- xs, esParBin x]
+
+{-
+Función: primos 
+Descripción: Recibe una lista y devuelve una lista con los números de la lista original que son primos
+Uso: 
+primos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[2, 3, 5, 7]
+-}
+
+primos :: [Int] -> [Int]
+primos xs = [x | x <- xs, esPrimo x]
