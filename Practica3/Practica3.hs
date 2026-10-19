@@ -41,3 +41,15 @@ mensajeCetes inicial (Meses m) =
     where 
         final = cetes inicial (Meses m)
         rendimiento = final - inicial 
+
+{-
+Función: negativos 
+Descripción: Recibe una lista y devuelve el total de números negativos que hay en la lista
+Uso: 
+negativos [-3, -1, 2, 7, -8]
+3
+-}
+
+negativos :: [Int] -> Int
+negativos xs = length [x | x <- xs, x < 0]
+
