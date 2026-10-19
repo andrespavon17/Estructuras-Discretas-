@@ -8,7 +8,7 @@
 
 ## **Tiempo requerido para llevar a cabo la práctica:** 
 
-5 horas, aproximadamente. 
+9 horas, aproximadamente. 
 
 ## **Ejercicio favorito:** 
 
