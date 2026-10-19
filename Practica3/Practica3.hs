@@ -3,17 +3,9 @@ Función: cetes
 Descripción: Recibe un monto (el inicial), el plazo en días o meses durante el cual el dinero estará invertido, y devuelve el monto final que estará disponible al concluir el plazo seleccionado. 
 Uso: 
 cetes 100 (Dias 28)
-100.4
+100.47366
 cetes 100 (Meses 1)
-100.4
--}
-
-{-
-Tener en cuenta: 
-Las tasas de interés bruto anual según el plazo son: 
-Dias 28 o Meses 1: 6.09 %
-Dias 182 o Meses 6: 6.91 % 
-Dias 364 o Meses 12: 7.44 %
+100.47366
 -}
 
 data Tiempo = Dias Float | Meses Float deriving (Show, Eq)
@@ -25,3 +17,27 @@ cetes inicial tiempo =
         else if tiempo == Dias 182 || tiempo == Meses 6 
             then inicial * (1 + (0.0691 * (182/360))) 
             else inicial * (1 + (0.0744 * (364/360))) 
+
+{-
+Función: mensajeCetes
+Descripción: Recibe un monto inicial de inversión, un plazo expresado en días o meses, y devuelve un mensaje que indica: (1) el plazo de la inversión, (2) el rendimiento bruto obtenido, y (3) el monto acumulado al finalizar el plazo
+Uso: 
+mensajeCetes 100 (Dias 28) 
+"Despues de 28.0 dias, tu inversion ha tenido un rendimiento bruto de 0.47366333 pesos. El monto final de la inversion es de 100.47366 pesos."
+mensajeCetes 100 (Meses 1) 
+"Despues de 1.0 meses, tu inversion ha tenido un rendimiento bruto de 0.47366333 pesos. El monto final de la inversion es de 100.47366 pesos."
+-}
+
+mensajeCetes :: Float -> Tiempo -> String 
+
+mensajeCetes inicial (Dias d) = 
+    "Despues de " ++ show d ++ " dias, tu inversion ha tenido un rendimiento bruto de " ++ show rendimiento ++ " pesos. El monto final de la inversion es de " ++ show final ++ " pesos."
+    where 
+        final = cetes inicial (Dias d)
+        rendimiento = final - inicial 
+
+mensajeCetes inicial (Meses m) = 
+    "Despues de " ++ show m ++ " meses, tu inversion ha tenido un rendimiento bruto de " ++ show rendimiento ++ " pesos. El monto final de la inversion es de " ++ show final ++ " pesos."
+    where 
+        final = cetes inicial (Meses m)
+        rendimiento = final - inicial 
