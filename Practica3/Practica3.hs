@@ -76,3 +76,14 @@ primos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 primos :: [Int] -> [Int]
 primos xs = [x | x <- xs, esPrimo x]
+
+{-
+Función: coprimos 
+Descripción: Recibe un entero y devuelve una lista con sus coprimos
+Uso: 
+coprimos 10
+[1, 3, 7, 9]
+-}
+
+coprimos :: Int -> [Int]
+coprimos n = [x | x <- [1..n], sonCoprimos x n]
