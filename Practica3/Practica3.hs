@@ -1,3 +1,5 @@
+import EsParBin
+
 {-
 Función: cetes
 Descripción: Recibe un monto (el inicial), el plazo en días o meses durante el cual el dinero estará invertido, y devuelve el monto final que estará disponible al concluir el plazo seleccionado. 
@@ -53,3 +55,13 @@ negativos [-3, -1, 2, 7, -8]
 negativos :: [Int] -> Int
 negativos xs = length [x | x <- xs, x < 0]
 
+{-
+Función: soloPares
+Descripción: recibe una lista de tipo entero y devuelve una lista con los números de la lista original que son pares
+Uso: 
+soloPares [1, 2, 3, 4, 5, 6]
+[2, 4, 6]
+-}
+
+soloPares :: [Int] -> [Int]
+soloPares xs = [x | x <- xs, esParBin x]
