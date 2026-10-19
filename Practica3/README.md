@@ -8,17 +8,21 @@
 
 ## **Tiempo requerido para llevar a cabo la práctica:** 
 
-9 horas, aproximadamente. 
+11 horas, aproximadamente. 
 
 ## **Ejercicio favorito:** 
 
+En esta práctica, mi ejercicio favorito fue la definición de la función `cetes`, pues haciéndola aprendí el uso correcto de la condicional `if` (algo que, desafortunadamente, descuidé en la práctica anterior). 
 
 ## **Comentarios:** 
+
 En la práctica anterior hice un uso ilegal de la función de evaluación de rangos con guardas, siguiendo un ejemplo que hallé en: 
 
 - Dodino, F., Lombardi, C., Passerini, N. y Solmirano, D. (2024, abril). Paradigma funcional - Módulo 4: Recursividad. Evaluación diferida (Versión 2.1). Google Docs. [https://docs.google.com/document/d/1JOlRcFZ7Ehm9gx_wH77MkhvObcyKS7Wqo4Sm8joMJBM/edit?tab=t.0#heading=h.xtpxwvpvaqiq]
 
-En esta nueva ocasión, observando estrictamente los lineamientos establecidos, logré una definición similar (la de la función `cetes`) usando solamente los operadores y las funciones legales (en este caso: la condicional `if`), y por medio de la creación de un tipo de dato propio, siguiendo las recomendaciones del profesor Irvin J. Cruz González.  
+En esta nueva ocasión, observando estrictamente los lineamientos establecidos, logré una definición similar (la de la función `cetes`) usando solamente los operadores y las funciones legales (en este caso: la condicional `if`), y por medio de la creación de un tipo de dato propio, siguiendo las recomendaciones del profesor Irvin J. Cruz González. 
+
+Por otra parte, en esta práctica hago uso de algunas funciones auxiliares, importadas por medio de un módulo, cuales son las funciones `esParBin` y `divisores` (ambas de estas analizadas en la última sesión de laboratorio), y las funciones `esPrimo` y `sonCoprimos`. Esto con el propósito de facilitar la definición de algunas de las funciones principales y mantener el código fuente bien ordenado por medio de la encapsulación de las funciones auxiliares. 
 
 ## **¿Cuál es la diferencia entre `Num` e `Int`?**
 
@@ -45,4 +49,7 @@ Se puede ver, además, que la restricción se aplica a la variable de tipo `a`, 
 ![mi imagen](ejemplo2.png)
 
 ## **Bibliografía:**
+
+- *Conventional Commits*. (2019). Conventional Commits 1.0.0 [Especificación técnica]. https://www.conventionalcommits.org/en/v1.0.0/
+- Lipovača, M. (2011). Making our own types and typeclasses. En *Learn You a Haskell for Great Good!* https://learnyouahaskell.github.io/making-our-own-types-and-typeclasses
 - Marlow, S. (Ed.). (2010). *The Haskell 2010 language report*. Haskell.org. https://www.haskell.org/onlinereport/haskell2010/
