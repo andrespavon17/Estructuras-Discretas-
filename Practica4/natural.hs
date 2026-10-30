@@ -1,4 +1,4 @@
-data Natural = Cero | S Natural deriving (Eq, Show) 
+import AuxiliarPractica4
 
 {-
 Función: a_natural
@@ -25,3 +25,16 @@ a_entero (S (S (S Cero))) = 3
 a_entero :: Natural -> Int  
 a_entero Cero = 0
 a_entero (S natural) = 1 + (a_entero (natural))
+
+{-
+Función: potenciaNat
+Descripción: recibe dos naturales y eleva el primero a la potencia del segundo
+Uso: 
+potenciaNat (S (S (S Cero))) (S (S Cero)) = S (S (S (S (S (S (S (S (S ( S Cero)))))))))
+-}
+
+potenciaNat :: Natural -> Natural -> Natural 
+potenciaNat Cero Cero = Cero 
+potenciaNat Cero natural = Cero 
+potenciaNat natural Cero = (S Cero) 
+potenciaNat (S natural) matural = multiplicaNat (S natural) matural 
