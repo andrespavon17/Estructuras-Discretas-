@@ -1,4 +1,4 @@
-module AuxiliarPractica4 (Natural(..), sumaNat, multiplicaNat) where 
+module Auxiliar (Natural(..), sumaNat, multiplicaNat) where 
 data Natural = Cero | S Natural deriving (Eq, Show) 
 
 {-

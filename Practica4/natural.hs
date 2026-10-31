@@ -1,4 +1,4 @@
-import AuxiliarPractica4
+import Auxiliar (Natural(..), sumaNat, multiplicaNat)
 
 {-
 Función: a_natural
@@ -37,4 +37,4 @@ potenciaNat :: Natural -> Natural -> Natural
 potenciaNat Cero Cero = Cero 
 potenciaNat Cero natural = Cero 
 potenciaNat natural Cero = (S Cero) 
-potenciaNat (S natural) matural = multiplicaNat (S natural) matural 
+potenciaNat natural (S matural) = multiplicaNat natural natural 
