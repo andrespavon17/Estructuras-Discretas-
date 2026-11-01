@@ -24,17 +24,26 @@ a_entero (S (S (S Cero))) = 3
 
 a_entero :: Natural -> Int  
 a_entero Cero = 0
-a_entero (S natural) = 1 + (a_entero (natural))
+a_entero (S natural) = 1 + a_entero natural
 
 {-
 Función: potenciaNat
 Descripción: recibe dos naturales y eleva el primero a la potencia del segundo
 Uso: 
-potenciaNat (S (S (S Cero))) (S (S Cero)) = S (S (S (S (S (S (S (S (S ( S Cero)))))))))
+potenciaNat (S (S (S Cero))) (S (S Cero)) = S (S (S (S (S (S (S (S (S (S Cero)))))))))
 -}
 
 potenciaNat :: Natural -> Natural -> Natural 
-potenciaNat Cero Cero = Cero 
-potenciaNat Cero natural = Cero 
-potenciaNat natural Cero = (S Cero) 
-potenciaNat natural (S matural) = multiplicaNat natural natural 
+potenciaNat natural Cero = S Cero 
+potenciaNat natural (S matural) = multiplicaNat natural (potenciaNat natural matural) 
+
+{-
+Función: facNat
+Descripción: recibe un natural y devuelve el factorial del natural dado
+Uso: 
+facNat (S (S (S Cero))) = S (S (S (S (S (S Cero)))))
+-}
+
+facNat :: Natural -> Natural 
+facNat Cero = S Cero 
+facNat (S natural) = multiplicaNat (S natural) (facNat natural)
