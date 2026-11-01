@@ -1,4 +1,4 @@
-import Auxiliar (Natural(..), sumaNat, multiplicaNat)
+import Auxiliar 
 
 {-
 Función: a_natural
