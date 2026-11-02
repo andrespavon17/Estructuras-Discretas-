@@ -61,9 +61,9 @@ restaEnt :: Entero -> Entero -> Entero
 -- Casos Base
 restaEnt entero Zero = entero
 restaEnt Zero (Succ emtero) = Neg (Succ emtero)
-restaEnt Zero (Neg emtero) = Succ emtero
 
 -- Casos Recursivos
 restaEnt (Succ entero) (Succ emtero) = restaEnt entero emtero
-restaEnt (Neg entero) (Neg emtero) = restaEnt entero emtero
-restaEnt entero (Neg emtero) = sumaEnt entero (Succ emtero)
+restaEnt (Neg entero) (Neg emtero) = restaEnt emtero entero
+restaEnt entero (Neg emtero) = sumaEnt entero emtero
+restaEnt (Neg entero) emtero = Neg (sumaEnt entero emtero)
